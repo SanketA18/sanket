@@ -1,0 +1,11 @@
+clc;
+clear all; 
+close all;
+Eb = 2*10^3;
+No = 1*10^2;
+x = 0:0.0001:(Eb/No);
+Pe = (1/2)*erfc(sqrt(0.4*x));
+plot(x,Pe);
+xlabel('Signal to Noise ratio');
+ylabel('Probability of error');
+title('Pe for M-ary QAM of sanket adsule 304C068');

@@ -1,0 +1,12 @@
+clc;
+clear all; 
+close all;
+e =2*10^3;
+n =1*10^2;
+m=4;
+x=0:0.001:(e/n);
+Pe=erfc(sqrt(x)*sin(3.14/m));
+plot(x,Pe);
+xlabel('Signal to Noise ratio');
+ylabel('Probability of error');
+title('Pe for M-ary PSK of SANKET ADSULE 304C068');

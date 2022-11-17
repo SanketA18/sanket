@@ -1,0 +1,31 @@
+%{
+Exp 03:- Simulation study of cyclic codes.
+Name:- Yash Walkunde
+Div:- C
+Roll no:-304C063
+%}
+
+
+clc;
+close all;
+m=input('Enter the coeff of message polynomial :' );
+n=input('Enter the n :');
+k=length(m);
+pol=cyclpoly(n,k);
+[paramat,parcheckmat,k]= cyclgen(n,pol);
+disp('Parity Matrix:-');
+disp(paramat);
+disp('parityCheck Matrix:-');
+disp('paracheckmat');
+s=syndtable(parcheckmat);
+c=encode(m,n,k,'cyclic/binary',pol);
+disp('Encoded codeword is : ');
+disp (c);
+w=input('Enter the codeword with Error:');
+R=decode (c,n,k,'cyclic/binary',pol,s);
+disp( 'Decoded codeword :');
+disp(R);
+[msg,err,ccode]=decode(c,n,k,'cyclic/binary',pol,s);
+disp('Corrected code is :');
+disp(ccode);
+

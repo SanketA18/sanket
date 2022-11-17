@@ -1,0 +1,11 @@
+clc;
+clear all; 
+close all;
+Eb = 2*10^4;
+No = 1*10^3;
+x = 0:0.001:(Eb/No);
+Pe = (1/2)*erfc(sqrt(x));
+plot(x,Pe);
+xlabel('Signal to Noise ratio');
+ylabel('Probability of error');
+title('Pe for BPSK of SANKET ADSULE  304C068');
